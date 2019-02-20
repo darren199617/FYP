@@ -8,13 +8,18 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { InformationPage } from '../pages/information/information';
+import { TestPage } from '../pages/test/test';
+import { Test1Page } from '../pages/test1/test1';
+import { ProfilePage } from '../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FIREBASE_CONFIG } from "./app.firebase.config";
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IonicStorageModule } from '@ionic/storage';
+
 
 
 @NgModule({
@@ -25,12 +30,16 @@ import { IonicStorageModule } from '@ionic/storage';
     LoginPage,
     RegisterPage,
     InformationPage,
+    TestPage,
+    Test1Page,
+    ProfilePage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
+   AngularFireDatabaseModule,
     IonicStorageModule.forRoot(),
 
   ],
@@ -41,7 +50,10 @@ import { IonicStorageModule } from '@ionic/storage';
     ListPage,
     LoginPage,
     RegisterPage,
-    InformationPage
+    InformationPage,
+    TestPage,
+    Test1Page,
+    ProfilePage,
   ],
   providers: [
     StatusBar,

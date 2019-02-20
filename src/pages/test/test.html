@@ -1,0 +1,147 @@
+<!--
+  Generated template for the TestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title>Memory Test</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="memTech">
+
+  <button ion-button  (click)="NumberTechniques()" class="btn">Memory Techniques</button>
+  </div>
+
+  <div padding-top class="EX">
+    <h3> 1. </h3>
+  </div>
+  <div class="numberCSS">
+<p> Are you able to remember phone numbers?</p> 
+<p>Try to memorise the following number:</p>
+ 
+
+
+<button ion-button (click)="show_input()" class="btn" >Show/Hide number</button>
+<div *ngIf="show">
+ <h5> 19161945</h5>
+
+  </div>
+  <div padding-bottom>
+  <ion-item>
+  <ion-input text-center placeholder="Enter Number" [(ngModel)]="enteredNumber" ></ion-input>
+</ion-item>
+<button ion-button (click)="check1()" class="btn">Check</button></div>
+
+ <div padding-top class="EX">
+    <h3> 2. </h3>
+  </div>
+
+
+
+  </div>
+<div class="phoneCSS">
+
+<p>Now show the phone number and try to remember it, then hide it and see if you can remember it</p>
+<button ion-button (click)="show_input1()" class="btn" >Show/Hide phone number</button>
+<div *ngIf="show1">
+ <h5> 1800341341</h5>
+
+  </div>
+
+
+
+<div>
+    <p> Enter the number you memorised:</p>
+
+</div>
+
+<div padding-bottom>
+<ion-item>
+<ion-input text-center placeholder="Enter Phone Number" [(ngModel)]="enteredPhone" ></ion-input>
+</ion-item>
+<button  ion-button (click)="check2()" class="btn">Check</button>
+</div>
+</div>
+
+
+
+  <div padding-top class="EX">
+    <h3> 3. </h3>
+  </div>
+ <div class="names">
+  <p>Look at the following pictures and the names below. Try to remember the name of each person. When you're ready, hide the names and enter the correct name below each picture</p></div>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-img src="../assets/imgs/person1.jpg" ></ion-img>
+    </ion-col>
+    <ion-col>
+       <ion-img src="../assets/imgs/person2b.jpg" ></ion-img>
+    </ion-col>
+    <ion-col>
+       <ion-img src="../assets/imgs/person3b.jpg"></ion-img>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+
+
+<div class="names">
+<div *ngIf="show2">
+<ion-grid>
+  <ion-row>
+    <ion-col>
+    <h3>John</h3>
+    </ion-col>
+    <ion-col>
+    <h3>Lisa</h3>
+    </ion-col>
+    <ion-col>
+    <h3>Katie</h3>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+</div>
+<button ion-button (click)="show_input2()" class="btn">Show/Hide Names</button>
+
+
+<h3 padding-top>A</h3>
+<ion-img src="../assets/imgs/person1.jpg" ></ion-img>
+<ion-item>
+<ion-input text-center placeholder="Enter Name" [(ngModel)]="enteredName1"></ion-input>
+</ion-item>
+<button  ion-button (click)="check3()" class="btn">Check</button>
+
+
+<h3 padding-top>B</h3>
+<ion-img src="../assets/imgs/person2b.jpg" ></ion-img>
+<ion-item>
+<ion-input text-center placeholder="Enter Name" [(ngModel)]="enteredName2"></ion-input>
+</ion-item>
+<button  ion-button (click)="check4()" class="btn">Check</button>
+
+
+<h3 padding-top>C</h3>
+<ion-img src="../assets/imgs/person3b.jpg" ></ion-img>
+<ion-item>
+<ion-input text-center placeholder="Enter Name" [(ngModel)]="enteredName3"></ion-input>
+</ion-item>
+<button  ion-button (click)="check5()" class="btn">Check</button>
+
+
+
+</div>
+
+</ion-content>

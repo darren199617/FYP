@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
 import { AngularFireAuth } from "angularfire2/auth";
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database"; 
+import { ToastController } from 'ionic-angular';
+
 /**
  * Generated class for the RegisterPage page.
  *
@@ -18,14 +21,28 @@ export class RegisterPage {
 
 user ={} as User;
   constructor( private aFauth : AngularFireAuth,
-  	public navCtrl: NavController, public navParams: NavParams) {
+  	public navCtrl: NavController, public toastCtrl: ToastController, public navParams: NavParams) {
   }
 
 async register(user: User){
 	try {
+
 const result = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
-	
 	console.log(result);
+	/*if(result){
+  let toast = this.toastCtrl.create({
+      message: 'Successfully Registered',
+      duration: 3000
+    });
+    toast.present();
+}
+   else {
+      let toast = this.toastCtrl.create({
+      message: 'Please Try Again',
+      duration: 3000
+    });
+    toast.present();}}*/
+
 
 		}
  catch (e) {

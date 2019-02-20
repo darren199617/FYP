@@ -25673,3 +25673,81 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
+
+page-home .fullpage {
+  text-align: center;
+}
+
+page-home .btn {
+  display: inline-block;
+  height: 35px;
+  width: 250px;
+  border: 1px;
+  background-color: #3bce8f;
+}
+
+page-information .bground {
+  padding: 10px;
+  background-color: #3bce8f;
+}
+
+page-information .facts {
+  text-align: center;
+  background-color: #3bce8f;
+  font-size: 18px;
+}
+
+page-information .btn {
+  display: inline-block;
+  height: 40px;
+  width: 275px;
+  border: 5px;
+  background-color: #3bce8f;
+}
+
+page-test .numberCSS {
+  text-align: center;
+}
+
+page-test .phoneCSS {
+  text-align: center;
+}
+
+page-test .memTech {
+  text-align: center;
+}
+
+page-test .EX {
+  text-align: left;
+}
+
+page-test .names {
+  text-align: center;
+}
+
+page-test .btn {
+  display: inline-block;
+  height: 35px;
+  width: 250px;
+  border: 1px;
+  background-color: #3bce8f;
+}
+
+page-test1 .names {
+  background-color: #3bce8f;
+  font-size: 18px;
+}
+
+page-test1 .numbers {
+  background-color: #3bce8f;
+  font-size: 18px;
+}
+
+page-test1 .point {
+  font-size: 18px;
+}

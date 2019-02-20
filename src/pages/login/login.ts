@@ -4,8 +4,11 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { HomePage } from '../home/home';
 import { User } from "../../models/user";
 import { RegisterPage } from "../register/register";
+import { ProfilePage } from '../profile/profile';
 import { InformationPage } from "../information/information";
 import { AngularFireAuth} from 'angularfire2/auth';
+import { ToastController } from 'ionic-angular';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -22,7 +25,7 @@ export class LoginPage {
 	user = {} as User;
 
 //HomePage: HomePage;
-  constructor(private aFauth: AngularFireAuth,  private toast: ToastController,
+  constructor(private aFauth: AngularFireAuth,  public toastCtrl: ToastController,
   	public navCtrl: NavController, public navParams: NavParams) {
 
 
@@ -47,17 +50,19 @@ this.navCtrl.setRoot(HomePage);
    const result = await this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
 
 if(result){
-this.navCtrl.setRoot(HomePage);	
+this.navCtrl.setRoot(ProfilePage);	
+  let toast = this.toastCtrl.create({
+      message: 'Successfully Logged In',
+      duration: 3000
+    });
+    toast.present();
 }
-    else{
-   this.toast.create({
-      message: 'incorrect Email or Password',
-      duration:3000
-    }).present();
- }
- 
-
- }
+   else {
+      let toast = this.toastCtrl.create({
+      message: 'Incorrect Email/Password',
+      duration: 3000
+    });
+    toast.present();}}
 
  catch (e) {
   	console.error(e);

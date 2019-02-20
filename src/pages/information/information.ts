@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Test1Page } from '../test1/test1';
 /**
  * Generated class for the InformationPage page.
  *
@@ -19,7 +19,10 @@ export class InformationPage {
 
   constructor( public navCtrl: NavController, public navParams: NavParams) {
   }
-
+ NumberTechniques()
+  {
+    this.navCtrl.push(Test1Page); 
+     }
   ionViewDidLoad() {
     console.log('ionViewDidLoad InformationPage');
   }

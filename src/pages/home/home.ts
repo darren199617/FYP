@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { AngularFireAuth} from 'angularfire2/auth'
 import { LoginPage } from '../login/login';
+import { Answer } from "../../models/answer";
+import { InformationPage } from '../information/information';
+
 
 
 @Component({
@@ -9,11 +12,15 @@ import { LoginPage } from '../login/login';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
   constructor(private aFauth: AngularFireAuth, private toast: ToastController,
   	public navCtrl: NavController) {
 
   }
+
+
+
+
+
 
   logoutAService()
   {
