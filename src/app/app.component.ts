@@ -8,6 +8,9 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { InformationPage } from '../pages/information/information';
 import { TestPage } from '../pages/test/test';
+import { Test1Page } from '../pages/test1/test1';
+import { Test2Page } from '../pages/test2/test2';
+import { QuizPage } from '../pages/quiz/quiz';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +30,9 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Information', component: InformationPage },
-      { title: 'Memory Test', component: TestPage}
+      { title: 'Memory Test', component: TestPage},
+      { title: 'Memory Test2', component: Test2Page},
+      { title: 'Quiz', component: QuizPage}
      // { title: 'Login', component: LoginPage }
     ];
 

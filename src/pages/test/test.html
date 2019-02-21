@@ -40,7 +40,9 @@
   <ion-item>
   <ion-input text-center placeholder="Enter Number" [(ngModel)]="enteredNumber" ></ion-input>
 </ion-item>
-<button ion-button (click)="check1()" class="btn">Check</button></div>
+<button ion-button (click)="check1()" class="btn">Check</button> 
+<button ion-button (click)="check1Count()" class="btnCount">{{Counter1}}</button>
+</div>
 
  <div padding-top class="EX">
     <h3> 2. </h3>
@@ -70,6 +72,7 @@
 <ion-input text-center placeholder="Enter Phone Number" [(ngModel)]="enteredPhone" ></ion-input>
 </ion-item>
 <button  ion-button (click)="check2()" class="btn">Check</button>
+<button ion-button (click)="check2Count()" class="btnCount">{{Counter2}}</button>
 </div>
 </div>
 
@@ -123,6 +126,7 @@
 <ion-input text-center placeholder="Enter Name" [(ngModel)]="enteredName1"></ion-input>
 </ion-item>
 <button  ion-button (click)="check3()" class="btn">Check</button>
+<button ion-button (click)="check3Count()" class="btnCount">{{Counter3}}</button>
 
 
 <h3 padding-top>B</h3>
@@ -131,17 +135,28 @@
 <ion-input text-center placeholder="Enter Name" [(ngModel)]="enteredName2"></ion-input>
 </ion-item>
 <button  ion-button (click)="check4()" class="btn">Check</button>
+<button ion-button (click)="check4Count()" class="btnCount">{{Counter4}}</button>
 
 
 <h3 padding-top>C</h3>
 <ion-img src="../assets/imgs/person3b.jpg" ></ion-img>
+<div padding-bottom>
 <ion-item>
 <ion-input text-center placeholder="Enter Name" [(ngModel)]="enteredName3"></ion-input>
 </ion-item>
 <button  ion-button (click)="check5()" class="btn">Check</button>
+<button ion-button (click)="check5Count()" class="btnCount">{{Counter5}}</button>
+</div>
 
+
+
+
+<h4> To get your total number of tries for all of the questions please click the button below. You should try to have the lowest score possible</h4>
+<button ion-button (click)="checkTotal()" class="btn">Total Tries: {{Totalcount}}</button>
+<h4> Click Reset to start again</h4>
+
+<button ion-button (click)="resetVal()" class="btn">Reset</button>
 
 
 </div>
-
 </ion-content>

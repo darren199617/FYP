@@ -11,6 +11,8 @@ import { InformationPage } from '../pages/information/information';
 import { TestPage } from '../pages/test/test';
 import { Test1Page } from '../pages/test1/test1';
 import { ProfilePage } from '../pages/profile/profile';
+import { Test2Page } from '../pages/test2/test2';
+import { QuizPage } from '../pages/quiz/quiz';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,6 +35,8 @@ import { IonicStorageModule } from '@ionic/storage';
     TestPage,
     Test1Page,
     ProfilePage,
+    Test2Page,
+    QuizPage,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,8 @@ import { IonicStorageModule } from '@ionic/storage';
     TestPage,
     Test1Page,
     ProfilePage,
+    Test2Page,
+    QuizPage
   ],
   providers: [
     StatusBar,
